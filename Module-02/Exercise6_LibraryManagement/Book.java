@@ -1,0 +1,23 @@
+package Exercise6_LibraryManagement;
+
+public class Book {
+    private int bookId;
+    private String title;
+    private String author;
+
+    public Book(int bookId, String title, String author) {
+        this.bookId = bookId;
+        this.title  = title;
+        this.author = author;
+    }
+
+    public int getBookId()    { return bookId; }
+    public String getTitle()  { return title; }
+    public String getAuthor() { return author; }
+
+    @Override
+    public String toString() {
+        return String.format("Book[id=%d, title='%s', author='%s']",
+                bookId, title, author);
+    }
+}
