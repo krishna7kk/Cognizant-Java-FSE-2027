@@ -1,0 +1,7 @@
+.home { padding: 1.5rem; }
+.stats-row { display: flex; gap: 1.5rem; margin: 1rem 0; }
+.stat { background: #f1f5f9; border-radius: 8px; padding: 1rem 1.5rem; text-align: center; }
+.stat .value { display: block; font-size: 1.5rem; font-weight: 700; }
+.stat .label { font-size: 0.8rem; color: #64748b; }
+.message { color: #16a34a; font-weight: 600; }
+.search { margin-top: 1rem; }

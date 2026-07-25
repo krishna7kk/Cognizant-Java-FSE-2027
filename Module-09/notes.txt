@@ -1,0 +1,18 @@
+Hands-On 1, Task 1, Step 2 — one-line notes on each generated file:
+
+angular.json         - Workspace/project configuration: build targets, file replacements, asset paths, and budgets.
+tsconfig.json         - Base TypeScript compiler options shared by the whole workspace.
+tsconfig.app.json     - TypeScript options specific to compiling the browser application bundle.
+package.json          - npm scripts (ng, start, build, watch, test) and the project's dependency list.
+src/main.ts            - Application entry point; bootstraps the root standalone App component with appConfig.
+src/app/app.config.ts - Application-wide providers (router, HttpClient, NgRx store, etc.) for the standalone bootstrap.
+src/app/app.ts        - Root standalone component; hosts the header and <router-outlet>.
+src/index.html         - The single HTML shell page the whole SPA is rendered into.
+
+Step 5 — angular.json production budgets (architect > build > configurations > production):
+  maximumWarning / maximumError control the initial bundle size thresholds. The CLI prints a
+  build warning once the bundle crosses maximumWarning, and fails the build outright once it
+  crosses maximumError — this keeps the shipped bundle size in check over time.
+
+Note: Angular 20 scaffolds standalone components by default, so there is no app.module.ts —
+bootstrapping happens via src/main.ts + src/app/app.config.ts instead of an AppModule.

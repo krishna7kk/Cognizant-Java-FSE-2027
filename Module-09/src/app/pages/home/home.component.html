@@ -1,0 +1,30 @@
+<section class="home">
+  <h1>{{ portalName }}</h1>
+  <p>Welcome back! Track your enrollments, grades, and course catalogue all in one place.</p>
+
+  <div class="stats-row">
+    <div class="stat">
+      <span class="value">{{ coursesAvailable }}</span>
+      <span class="label">Courses Available</span>
+    </div>
+    <div class="stat">
+      <span class="value">3</span>
+      <span class="label">Enrolled</span>
+    </div>
+    <div class="stat">
+      <span class="value">3.8</span>
+      <span class="label">GPA</span>
+    </div>
+  </div>
+
+  <button type="button" [disabled]="!isPortalActive" (click)="onEnrollClick()">Enroll Now</button>
+  @if (message) {
+    <p class="message">{{ message }}</p>
+  }
+
+  <div class="search">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search courses..." name="searchTerm" />
+    <!-- [(ngModel)] is two-way (DOM <-> component); [property] alone is one-way (component -> DOM) -->
+    <p>Searching for: {{ searchTerm }}</p>
+  </div>
+</section>

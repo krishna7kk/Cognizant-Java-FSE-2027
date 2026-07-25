@@ -1,0 +1,34 @@
+<section class="course-list">
+  <h2>Course Catalogue</h2>
+
+  <input
+    type="text"
+    placeholder="Search courses..."
+    [ngModel]="searchTerm"
+    (ngModelChange)="onSearchChange($event)"
+  />
+
+  @if (isLoading$ | async) {
+    <p>Loading courses...</p>
+  } @else {
+    @if (error$ | async; as error) {
+      <p class="error">{{ error }}</p>
+    }
+
+    @if ((courses$ | async)?.length) {
+      <div class="grid">
+        @for (course of courses$ | async; track trackByCourseId($index, course)) {
+          <div (click)="goToDetail(course.id)">
+            <app-course-card [course]="course" (enrollRequested)="onEnroll($event)"></app-course-card>
+          </div>
+        }
+      </div>
+    } @else {
+      <p>No courses available.</p>
+    }
+  }
+
+  @if (selectedCourseId) {
+    <p>Selected course ID: {{ selectedCourseId }}</p>
+  }
+</section>

@@ -1,0 +1,40 @@
+@if (course) {
+  <div
+    class="course-card"
+    appHighlight="lightblue"
+    [ngClass]="cardClasses"
+    [ngStyle]="{ 'border-left-color': borderColor }"
+  >
+    <h3>{{ course.name }}</h3>
+    <p class="code">{{ course.code }}</p>
+    <p class="credits">{{ course.credits | creditLabel }}</p>
+
+    @switch (course.gradeStatus) {
+      @case ('passed') {
+        <span class="badge badge--green">Passed</span>
+      }
+      @case ('failed') {
+        <span class="badge badge--red">Failed</span>
+      }
+      @default {
+        <span class="badge badge--grey">Pending</span>
+      }
+    }
+
+    <div class="actions">
+      @if (!(isEnrolledLocally())) {
+        <button type="button" (click)="onEnrollClick()">Enroll</button>
+      } @else {
+        <button type="button" (click)="onUnenrollClick()">Unenroll</button>
+      }
+      <button type="button" (click)="toggleExpanded()">Show Details</button>
+    </div>
+
+    @if (isExpanded) {
+      <div class="details">
+        <p>Course ID: {{ course.id }}</p>
+        <p>Status: {{ course.gradeStatus }}</p>
+      </div>
+    }
+  </div>
+}

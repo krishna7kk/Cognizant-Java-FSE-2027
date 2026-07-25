@@ -1,0 +1,21 @@
+.portal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: #1e293b;
+  color: #fff;
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-left: 1.25rem;
+}
+.links a.active {
+  color: #fff;
+  font-weight: 600;
+}

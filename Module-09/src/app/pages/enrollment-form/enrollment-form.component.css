@@ -1,0 +1,10 @@
+.enrollment-form { padding: 1.5rem; max-width: 420px; }
+.field { margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.25rem; }
+.field.checkbox { flex-direction: row; align-items: center; }
+.error { color: #dc2626; font-size: 0.8rem; }
+.success { color: #16a34a; font-weight: 600; margin-top: 1rem; }
+.actions { display: flex; gap: 0.5rem; }
+
+/* Hands-On 4, Task 2, Step 45: Angular's automatic form-state CSS classes */
+:host ::ng-deep .ng-invalid.ng-touched { border-color: #dc2626; }
+:host ::ng-deep .ng-valid.ng-touched { border-color: #16a34a; }

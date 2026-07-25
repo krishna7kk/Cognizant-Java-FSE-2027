@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/2.auth-sso-exercises/exercise1-centralized-auth-oauth2-oidc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2.auth-sso-exercises/exercise3-jwt-secure-communication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5.microservices/account/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5.microservices/api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5.microservices/eureka-discovery-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5.microservices/greet-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5.microservices/loan/src/main/java" charset="UTF-8" />
+  </component>
+</project>

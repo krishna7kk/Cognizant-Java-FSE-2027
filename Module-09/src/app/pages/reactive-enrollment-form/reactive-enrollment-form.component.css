@@ -1,0 +1,8 @@
+.reactive-form { padding: 1.5rem; max-width: 420px; }
+.field { margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.25rem; }
+.field.checkbox { flex-direction: row; align-items: center; }
+.dynamic-row { display: flex; gap: 0.5rem; margin-bottom: 0.4rem; }
+.error { color: #dc2626; font-size: 0.8rem; }
+.hint { color: #64748b; font-size: 0.8rem; }
+.success { color: #16a34a; font-weight: 600; margin-top: 1rem; }
+.actions { display: flex; gap: 0.5rem; }
